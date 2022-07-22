@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 
 
@@ -12,14 +12,14 @@ const Filter = ({ filter, onChange }) => {
                 value={filter}
                 type='text'
                 onChange={onChange}
-            ></input>
+            />
         </div>
     );
 };
 
 Filter.propTypes = {
-  filter: propTypes.string.isRequired,
-  onChange: propTypes.func.isRequired,
+  filter: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default Filter;
