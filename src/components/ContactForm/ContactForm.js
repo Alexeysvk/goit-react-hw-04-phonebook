@@ -59,8 +59,7 @@ function ContactForm ({onSubmit}){
 
 
 ContactForm.propType = {
-    name: PropTypes.string.isRequired,
-    number: PropTypes.number.isRequired,
+    onSubmit: PropTypes.func.isRequired,
 };
 
 export default ContactForm;

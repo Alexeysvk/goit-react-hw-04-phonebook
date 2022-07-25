@@ -1,7 +1,6 @@
 import s from './App.module.css';
 import  { useState, useEffect } from 'react';
 import ContactForm from './ContactForm/ContactForm';
-import ContactItem from './ContactItem/ContactItem';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
 import { nanoid } from 'nanoid';
@@ -51,10 +50,8 @@ function App() {
           <ContactForm onSubmit={addContacts} />
           <h2 className={s.title}>Contacts</h2>
           <Filter value={filter} onChange={changeFilter} />
-          <ContactList>
-            <ContactItem contacts={visibleContact}
+          <ContactList contacts={visibleContact}
                 onDeleteContact={deleteContact}/>
-          </ContactList>
         </div>
       </>
     );

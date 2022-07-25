@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 
 
-const Filter = ({ filter, onChange }) => {
+const Filter = ({ value, onChange }) => {
     return (
         <div className={s.filterWrap}>
             <label className={s.label}>Find contact by name</label>
             <input
                 className={s.input}
-                value={filter}
+                value={value}
                 type='text'
                 onChange={onChange}
             />
@@ -18,8 +18,8 @@ const Filter = ({ filter, onChange }) => {
 };
 
 Filter.propTypes = {
-  filter: PropTypes.string,
-  onChange: PropTypes.func,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Filter;
